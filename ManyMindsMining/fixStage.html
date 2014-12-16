@@ -6,43 +6,22 @@
     <title>ManyMindsMining</title>
 
 
-    <link rel="stylesheet" href="./css/mystylesheet.css"/>
+
     <link rel="stylesheet" href="./css/jquery-ui.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
 
-    <script type="text/javascript" src="./js/myjs.js"></script>
 
     <script src="./js/jquery.js"></script>
 
     <script src="./js/jquery-ui.min.js"></script>
 
-
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 
-
-
-
-    <!--Begin fieldChooser-->
-    <!--<script src="./js/fieldChooser.js"></script>-->
-    <!--<script>-->
-        <!--$(document).ready(function () {-->
-            <!--var $sourceFields = $("#sourceFields");-->
-            <!--var $destinationFields = $("#destinationFields");-->
-            <!--var $chooser = $("#fieldChooser").fieldChooser(sourceFields, destinationFields);-->
-
-            <!--var $sourceFields2 = $("#sourceFields2");-->
-            <!--var $destinationFields2 = $("#destinationFields2");-->
-            <!--var $chooser2 = $("#fieldChooser2").fieldChooser(sourceFields2, destinationFields2);-->
-
-        <!--});-->
-    <!--</script>-->
-    <!--End fieldChooser-->
-
-
+    <link rel="stylesheet" href="./css/mystylesheet.css"/>
+    <script type="text/javascript" src="./js/myjs.js"></script>
 
 </head>
 
@@ -71,6 +50,10 @@
             overconsumption and an intrinsic susceptibility of their diseased liver to drug-induced hepatotoxicity.
         </p>
 
+        <div>
+            <img img class="img-responsive  center-block" id="figure" src="img/gr1.jpg" alt="Figure 1">
+        </div>
+
         <p class="literature">
             Actually, DILI in obese patients could occur as two distinct clinical settings. Indeed, in the context of
             obesity and related metabolic diseases, some drugs seem to aggravate pre-existing NAFLD whereas others could
@@ -87,13 +70,13 @@
             mostly been discovered during experimental studies, any extrapolation to humans should be done with caution.
         </p>
 
-        <div>
-            <img img class="img-responsive  center-block" id="figure" src="img/gr1.jpg" alt="Figure 1">
-        </div>
 
     </div>
 
-    <div class="findarea  col-md-7">
+    <div class="col-md-1">
+    </div>
+
+    <div class=" workingarea findarea  col-md-6" id="findAreaCol">
 
         <div class="row">
 
@@ -139,36 +122,57 @@
             </div>
         </div>
 
+
+        <!-- Begin of a fix area-->
         <div class="fixarea  row">
             <h2>Entity relations</h2>
 
             <table style="">
 
                 <tr>
+                    <td></td>
                     <td>First Entity</td>
+                    <td></td>
                     <td>Relation</td>
+                    <td></td>
                     <td>Second Entity</td>
+                    <td>Note(optional)</td>
                 </tr>
 
 
                 <tr>
 
+                    <td><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></td>
+
+
                     <td id="entity1">
-                        <select id="selection1">
-                            <option>obesity </option>
-                            <option>Negtivly-related</option>
-                            <option>Induce</option>
-                            <option>No clear relation</option>
-                            <option>Correlation</option>
-                            <option>Other</option>
+                        <select id="selection1" class="form-control" >
+                            <option>obesity</option>
+                            <option>hepatitis</option>
+                            <option>metabolic diseases</option>
+                            <option>non-alcoholic fatty liver disease (NAFLD)</option>
+                            <option>drug-induced liver injury (DILI)</option>
+                            <option>tamoxifen</option>
+                            <option>irinotecan</option>
+                            <option>methotrexate</option>
+                            <option>nucleoside reverse transcriptase inhibitors (NRTIs)</option>
+                            <option>stavudine</option>
+                            <option>didanosine</option>
+                            <option>acute liver injury</option>
+                            <option>isoflurane</option>
+                            <option>acetaminophen (APAP)</option>
+                            <option>losartan</option>
+                            <option>ticlopidine</option>
+                            <option>omeprazole</option>
                         </select>
 
 
                     </td>
 
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
 
                     <td id="possiblerelations">
-                        <select id="Relation">
+                        <select id="Relation" class="form-control">
                             <option>Cause</option>
                             <option>Negtivly-related</option>
                             <option selected="selected">Induce</option>
@@ -178,13 +182,15 @@
                         </select>
                     </td>
 
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
 
                     <td id="entity2">
-                        <select id="selection2">
+                        <select id="selection2" class="form-control">
                             <option>obesity</option>
                             <option>hepatitis</option>
                             <option>metabolic diseases</option>
-                            <option>NAFLD</option>
+                            <option>non-alcoholic fatty liver disease (NAFLD)</option>
+                            <option>drug-induced liver injury (DILI)</option>
                             <option>tamoxifen</option>
                             <option>irinotecan</option>
                             <option>methotrexate</option>
@@ -192,13 +198,354 @@
                             <option>stavudine</option>
                             <option>didanosine</option>
                             <option>acute liver injury</option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
-                            <option></option>
+                            <option>isoflurane</option>
+                            <option>acetaminophen (APAP)</option>
+                            <option>losartan</option>
+                            <option>ticlopidine</option>
+                            <option>omeprazole</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control">
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+        <!--End of a fix area-->
 
 
 
+        <!--Begin of a fix area-->
+
+        <div class="fixarea  row originalSelections">
+            <!--<h2>Entity relations</h2>-->
+            <br>
+
+            <table style="">
+
+                <!--<tr>-->
+                    <!--<td></td>-->
+                    <!--<td>First Entity</td>-->
+                    <!--<td></td>-->
+                    <!--<td>Relation</td>-->
+                    <!--<td></td>-->
+                    <!--<td>Second Entity</td>-->
+                    <!--<td>Note(optional)</td>-->
+                <!--</tr>-->
+
+
+                <tr>
+
+                    <td><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></td>
+
+
+                    <td >
+                        <select  class="form-control" >
+                            <option>obesity</option>
+                            <option>hepatitis</option>
+                            <option>metabolic diseases</option>
+                            <option>non-alcoholic fatty liver disease (NAFLD)</option>
+                            <option>drug-induced liver injury (DILI)</option>
+                            <option>tamoxifen</option>
+                            <option>irinotecan</option>
+                            <option>methotrexate</option>
+                            <option>nucleoside reverse transcriptase inhibitors (NRTIs)</option>
+                            <option>stavudine</option>
+                            <option>didanosine</option>
+                            <option>acute liver injury</option>
+                            <option>isoflurane</option>
+                            <option>acetaminophen (APAP)</option>
+                            <option>losartan</option>
+                            <option>ticlopidine</option>
+                            <option>omeprazole</option>
+                        </select>
+
+
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+
+                    <td >
+                        <select  class="form-control">
+                            <option>Cause</option>
+                            <option>Negtivly-related</option>
+                            <option selected="selected">Induce</option>
+                            <option>No clear relation</option>
+                            <option>Correlation</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+
+                    <td >
+                        <select class="form-control">
+                            <option>obesity</option>
+                            <option>hepatitis</option>
+                            <option>metabolic diseases</option>
+                            <option>non-alcoholic fatty liver disease (NAFLD)</option>
+                            <option>drug-induced liver injury (DILI)</option>
+                            <option>tamoxifen</option>
+                            <option>irinotecan</option>
+                            <option>methotrexate</option>
+                            <option>nucleoside reverse transcriptase inhibitors (NRTIs)</option>
+                            <option>stavudine</option>
+                            <option>didanosine</option>
+                            <option>acute liver injury</option>
+                            <option>isoflurane</option>
+                            <option>acetaminophen (APAP)</option>
+                            <option>losartan</option>
+                            <option>ticlopidine</option>
+                            <option>omeprazole</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control">
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+        <!--End of a fix area-->
+
+
+        <!--Begin of a fix area-->
+
+        <div class="fixarea  row originalSelections">
+            <!--<h2>Entity relations</h2>-->
+            <br>
+
+            <table style="">
+
+
+                <tr>
+
+                    <td><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></td>
+
+
+                    <td >
+                        <select  class="form-control" >
+                            <option>obesity</option>
+                            <option>hepatitis</option>
+                            <option>metabolic diseases</option>
+                            <option>non-alcoholic fatty liver disease (NAFLD)</option>
+                            <option>drug-induced liver injury (DILI)</option>
+                            <option>tamoxifen</option>
+                            <option>irinotecan</option>
+                            <option>methotrexate</option>
+                            <option>nucleoside reverse transcriptase inhibitors (NRTIs)</option>
+                            <option>stavudine</option>
+                            <option>didanosine</option>
+                            <option>acute liver injury</option>
+                            <option>isoflurane</option>
+                            <option>acetaminophen (APAP)</option>
+                            <option>losartan</option>
+                            <option>ticlopidine</option>
+                            <option>omeprazole</option>
+                        </select>
+
+
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+
+                    <td >
+                        <select  class="form-control">
+                            <option>Cause</option>
+                            <option>Negtivly-related</option>
+                            <option selected="selected">Induce</option>
+                            <option>No clear relation</option>
+                            <option>Correlation</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+
+                    <td >
+                        <select class="form-control">
+                            <option>obesity</option>
+                            <option>hepatitis</option>
+                            <option>metabolic diseases</option>
+                            <option>non-alcoholic fatty liver disease (NAFLD)</option>
+                            <option>drug-induced liver injury (DILI)</option>
+                            <option>tamoxifen</option>
+                            <option>irinotecan</option>
+                            <option>methotrexate</option>
+                            <option>nucleoside reverse transcriptase inhibitors (NRTIs)</option>
+                            <option>stavudine</option>
+                            <option>didanosine</option>
+                            <option>acute liver injury</option>
+                            <option>isoflurane</option>
+                            <option>acetaminophen (APAP)</option>
+                            <option>losartan</option>
+                            <option>ticlopidine</option>
+                            <option>omeprazole</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control">
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+        <!--End of a fix area-->
+
+        <!-------------------------------------------------------------------------------------->
+        <!--  Validate area -->
+        <!-- Begin of a validate area-->
+        <div class="validatearea  row">
+            <h2>Entity relations</h2>
+
+            <table style="">
+                <tr>
+                    <td></td>
+                    <td>First Entity</td>
+                    <td></td>
+                    <td>Relation</td>
+                    <td></td>
+                    <td>Second Entity</td>
+                    <td></td>
+                    <td>Reting
+                        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> </span>
+                        <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"> </span>
+                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"> </span>
+                        <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"> </span>
+                    </td>
+                </tr>
+
+
+                <tr>
+
+                    <td><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></td>
+
+
+                    <td >
+                        <span class="form-control" >
+                            <text>isoflurane</text>
+                        </span>
+
+
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+
+                    <td >
+                        <span class="form-control" >
+                            <text>Induce</text>
+                        </span>
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+
+                    <td >
+                        <span class="form-control" >
+                            <text>acute liver injury</text>
+                        </span>
+                    </td>
+
+                    <td align="right" >
+                        <span><text>'   '   '   '   '   '</text>  </span>
+                    </td>
+
+                    <td>
+                        <select class="form-control">
+                            <option >Strongly agree</option>
+                            <option>Agree</option>
+                            <option selected="selected">Not Sure</option>
+                            <option>Disagree</option>
+                            <option>Strongly disagree</option>
+                        </select>
+                    </td>
+                </tr>
+
+
+                <tr>
+
+                    <td><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></td>
+
+
+                    <td >
+                        <span class="form-control" >
+                            <text>omeprazole</text>
+                        </span>
+
+
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+
+                    <td >
+                        <span class="form-control" >
+                            <text>Negtivly-related</text>
+                        </span>
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+
+                    <td >
+                        <span class="form-control" >
+                            <text>obesity</text>
+                        </span>
+                    </td>
+
+                    <td align="right" >
+                        <span><text>'   '   '   '   '   '</text>  </span>
+                    </td>
+
+                    <td>
+                        <select class="form-control">
+                            <option >Strongly agree</option>
+                            <option>Agree</option>
+                            <option selected="selected">Not Sure</option>
+                            <option>Disagree</option>
+                            <option>Strongly disagree</option>
+                        </select>
+                    </td>
+                </tr>               <tr>
+
+                    <td><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></td>
+
+
+                    <td >
+                            <span class="form-control" >
+                                <text>obesity</text>
+                            </span>
+
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+
+                    <td >
+                            <span class="form-control" >
+                                <text>Cause</text>
+                            </span>
+                    </td>
+
+                    <td><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></td>
+
+                    <td >
+                            <span class="form-control" >
+                                <text>hepatitis</text>
+                            </span>
+                    </td>
+
+                    <td align="right" >
+                        <span><text>'   '   '   '   '   '</text>  </span>
+                    </td>
+
+                    <td>
+                        <select class="form-control">
+                            <option >Strongly agree</option>
+                            <option>Agree</option>
+                            <option selected="selected">Not Sure</option>
+                            <option>Disagree</option>
+                            <option>Strongly disagree</option>
                         </select>
                     </td>
                 </tr>
@@ -206,14 +553,36 @@
             </table>
 
         </div>
+        <!--End of a fix area-->
+
+
+
+
+
+
 
     </div>
 
 
 
 
+
+
+
 </div>
 
+
+
+
+<!--<div id="target">-->
+    <!--Im a newbie in javascript and I was in Ny times page and i noticed a pretty cool feature...-->
+<!--</div>-->
+
+<!--<script>-->
+    <!--$('#target').dblclick(function() {-->
+        <!--window.open("http://www.google.com/?q="+window.getSelection());-->
+    <!--});-->
+<!--</script>-->
 
 
 </body>
